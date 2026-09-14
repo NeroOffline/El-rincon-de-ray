@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="El rincón de Ray: recomendaciones de videojuegos, anime, libros, música y minijuegos." />
+  <title>El rincón de Ray</title>
+  <link rel="icon" href="assets/mascot/mono-avatar.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Ir al inicio">
+      <img src="assets/logo-el-rincon-de-ray.png" alt="El rincón de Ray" />
+    </a>
+
+    <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+
+    <nav class="main-nav" aria-label="Navegación principal">
+      <a href="#inicio" data-page="inicio" class="nav-link active">
+        <img src="assets/icons/inicio.png" alt="" /> Inicio
+      </a>
+      <a href="#videojuegos" data-page="videojuegos" class="nav-link">
+        <img src="assets/icons/gamepad.png" alt="" /> Videojuegos
+      </a>
+      <a href="#anime" data-page="anime" class="nav-link">
+        <img src="assets/icons/anime.png" alt="" /> Anime
+      </a>
+      <a href="#libros" data-page="libros" class="nav-link">
+        <img src="assets/icons/libros.png" alt="" /> Libros
+      </a>
+      <a href="#musica" data-page="musica" class="nav-link">
+        <img src="assets/icons/musica.png" alt="" /> Música
+      </a>
+      <a href="#minijuegos" data-page="minijuegos" class="nav-link">
+        <img src="assets/icons/gamepad.png" alt="" /> Minijuegos
+      </a>
+      <a href="#favoritos" data-page="favoritos" class="nav-link nav-text-only">♥ Favoritos</a>
+      <a href="#sobre-mi" data-page="sobre-mi" class="nav-link nav-text-only">● Sobre mí</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="page active-page page-inicio" data-page-section="inicio">
+      <div class="hero hero-home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <h1>El rincón de Ray</h1>
+          <p class="hero-lead">Un rincón hecho para probar cosas.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#videojuegos">♥ Explorar secciones →</a>
+            <a class="btn btn-ghost" href="#sobre-mi">✦ Conocer más sobre el sitio</a>
+          </div>
+        </div>
+        <img class="hero-mascot hero-mascot-home" src="assets/mascot/mono-relajado.png" alt="Changuito con lentes de sol" />
+      </div>
+
+      <div class="home-grid container">
+        <a class="section-preview games" href="#videojuegos">
+          <img src="assets/icons/gamepad.png" alt="" class="preview-icon" />
+          <div><h2>Videojuegos</h2><p>Mundos increibles por vivir.</p><span>Ver recomendaciones →</span></div>
+        </a>
+        <a class="section-preview anime" href="#anime">
+          <img src="assets/icons/anime.png" alt="" class="preview-icon" />
+          <div><h2>Anime</h2><p>Historias que te haran disfrutar.</p><span>Ver recomendaciones →</span></div>
+        </a>
+        <a class="section-preview books" href="#libros">
+          <img src="assets/icons/libros.png" alt="" class="preview-icon" />
+          <div><h2>Libros</h2><p>Historias interesantes que te haran pensar.</p><span>Ver recomendaciones →</span></div>
+        </a>
+        <a class="section-preview music" href="#musica">
+          <img src="assets/icons/musica.png" alt="" class="preview-icon" />
+          <div><h2>Música</h2><p>Canciones que te pueden gustar.</p><span>Ver recomendaciones →</span></div>
+        </a>
+        <a class="section-preview mini" href="#minijuegos">
+          <img src="assets/icons/gamepad.png" alt="" class="preview-icon" />
+          <div><h2>Minijuegos</h2><p>Pequeños juegos para pasar el rato.</p><span>Jugar ahora →</span></div>
+        </a>
+      </div>
+
+      <div class="home-bottom container">
+        <div class="quote-panel glass-panel">
+          <img src="assets/mascot/mono-saludando.png" alt="Changuito saludando" />
+          <div><strong>“Gracias por estar aquí.”</strong><p>Un lugar hecho con ganas.</p></div>
+        </div>
+        <div class="about-panel glass-panel">
+          <h3>Disfruta tu estancia aqui</h3>
+          <p>si no disfrutas me deprimo xd.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="videojuegos" class="page page-videojuegos" data-page-section="videojuegos">
+      <div class="hero hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content compact">
+          <div class="eyebrow"><img src="assets/icons/gamepad.png" alt="" /> Videojuegos</div>
+          <h1>Videojuegos</h1>
+          <p class="hero-lead">Descubre algunos videojuegos que te recomiendo para pasar un buen rato.</p>
+          <a class="btn btn-primary" href="#games-grid">Explorar recomendaciones →</a>
+        </div>
+        <img class="hero-mascot" src="assets/mascot/mono-saludando.png" alt="Changuito con lentes" />
+      </div>
+
+      <div class="toolbar container">
+        <div class="chips" data-filter-group="games">
+          <button class="chip active" data-filter="all">Todos</button>
+          <button class="chip" data-filter="rpg">RPG</button>
+          <button class="chip" data-filter="aventura">Aventura</button>
+          <button class="chip" data-filter="simulacion">Simulación</button>
+          <button class="chip" data-filter="novela-visual">Novela visual</button>
+          <button class="chip" data-filter="accion">Acción</button>
+        </div>
+        <input class="search" id="game-search" type="search" placeholder="Buscar videojuegos..." />
+      </div>
+
+      <div id="games-grid" class="cards-grid container">
+        <article class="recommendation-card" data-type="game" data-tags="rpg aventura fantasia" data-title="Metaphor ReFantazio">
+          <div class="card-image" style="--card-img:url('assets/recommendations/metaphor-refantazio.jpg')"></div>
+          <button class="favorite-btn" aria-label="Agregar Metaphor: ReFantazio a favoritos">♡</button>
+          <div class="card-body">
+            <h2>Metaphor: ReFantazio</h2>
+            <p>Un viaje épico en un reino de fantasía donde tus ideales pueden cambiar el mundo.</p>
+            <div class="tag-row"><span>RPG</span><span>Fantasía</span><span>Historia</span></div>
+            <a href="https://store.steampowered.com/app/2679460/Metaphor_ReFantazio/" class="btn-card external-placeholder" target="_blank" rel="noopener noreferrer">Ver en Steam →</a>
+          </div>
+        </article>
+
+        <article class="recommendation-card" data-type="game" data-tags="rpg aventura vida-social" data-title="Persona 5 Royal">
+          <div class="card-image" style="--card-img:url('assets/recommendations/persona5-royal.jpg')"></div>
+          <button class="favorite-btn" aria-label="Agregar Persona 5 Royal a favoritos">♡</button>
+          <div class="card-body">
+            <h2>Persona 5 Royal</h2>
+            <p>Una historia de rebeldía inolvidable.</p>
+            <div class="tag-row"><span>RPG</span><span>Vida social</span><span>Estilo</span></div>
+            <a href="https://store.steampowered.com/app/1687950/Persona_5_Royal/" class="btn-card external-placeholder" target="_blank" rel="noopener noreferrer">Ver en Steam →</a>
+          </div>
+        </article>
+
+        <article class="recommendation-card" data-type="game" data-tags="simulacion novela-visual psicologico" data-title="Needy Girl Overdose">
+          <div class="card-image" style="--card-img:url('assets/recommendations/needy-girl-overdose.jpg')"></div>
+          <button class="favorite-btn" aria-label="Agregar Needy Girl Overdose a favoritos">♡</button>
+          <div class="card-body">
+            <h2>Needy Girl Overdose</h2>
+            <p>Vtubers, Fama y Drogas.</p>
+            <div class="tag-row"><span>Simulación</span><span>Novela visual</span><span>Psicológico</span></div>
+            <a href="https://store.steampowered.com/app/1451940/NEEDY_GIRL_OVERDOSE/" class="btn-card external-placeholder" target="_blank" rel="noopener noreferrer">Ver en Steam →</a>
+          </div>
+        </article>
+
+        <article class="recommendation-card" data-type="game" data-tags="accion novela-visual romance" data-title="Eternights">
+          <div class="card-image" style="--card-img:url('assets/recommendations/eternights.jpg')"></div>
+          <button class="favorite-btn" aria-label="Agregar Eternights a favoritos">♡</button>
+          <div class="card-body">
+            <h2>Eternights</h2>
+            <p>Vergazos y Monas chinas que mas puedes pedir.</p>
+            <div class="tag-row"><span>Acción</span><span>Novela visual</span><span>Romance</span></div>
+            <a href="https://store.steampowered.com/app/1402110/Eternights/" class="btn-card external-placeholder" target="_blank" rel="noopener noreferrer">Ver en Steam →</a>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section id="anime" class="page page-anime" data-page-section="anime">
+      <div class="hero hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content compact">
+          <div class="eyebrow"><img src="assets/icons/anime.png" alt="" /> Anime</div>
+          <h1>Anime</h1>
+          <p class="hero-lead">Historias memorables que te recomiendo ver.</p>
+          <a class="btn btn-primary" href="#anime-grid">Explorar animes →</a>
+        </div>
+      </div>
+      <div class="toolbar container">
+        <div class="chips" data-filter-group="anime">
+          <button class="chip active" data-filter="all">Todos</button>
+          <button class="chip" data-filter="shonen">Shōnen</button>
+          <button class="chip" data-filter="comedia">Comedia</button>
+          <button class="chip" data-filter="romance">Romance</button>
+          <button class="chip" data-filter="sobrenatural">Sobrenatural</button>
+          <button class="chip" data-filter="terror">Terror</button>
+        </div>
+        <input class="search" id="anime-search" type="search" placeholder="Buscar anime..." />
+      </div>
+
+      <div id="anime-grid" class="cards-grid container">
+        <article class="recommendation-card" data-type="anime" data-tags="shonen accion" data-title="JoJo's Bizarre Adventure">
+          <div class="card-image" style="--card-img:url('assets/recommendations/jojos-bizarre-adventure.jpg')"></div>
+          <button class="favorite-btn" aria-label="Agregar JoJo's Bizarre Adventure a favoritos">♡</button>
+          <div class="card-body"><h2>JoJo's Bizarre Adventure</h2><p>gays con estilo contra vampiros metrosexuales y otros gays.</p><a href="https://www.animoratv.com/anime/jojo-no-kimyou-na-bouken-tv" class="btn-card external-placeholder" target="_blank" rel="noopener noreferrer">Ver anime →</a></div>
+        </article>
+        <article class="recommendation-card" data-type="anime" data-tags="shonen comedia sobrenatural" data-title="Undead Unluck">
+          <div class="card-image" style="--card-img:url('assets/recommendations/undead-unluck.jpg')"></div>
+          <button class="favorite-btn" aria-label="Agregar Undead Unluck a favoritos">♡</button>
+          <div class="card-body"><h2>Undead Unluck</h2><p>Un loco que se quiere morir y no puede y una mona china sin autoestima que si la tocas te mueres.</p><a href="https://www.animoratv.com/anime/undead-unluck" class="btn-card external-placeholder" target="_blank" rel="noopener noreferrer">Ver anime →</a></div>
+        </article>
+        <article class="recommendation-card" data-type="anime" data-tags="comedia romance" data-title="Kaguya-sama Love Is War">
+          <div class="card-image" style="--card-img:url('assets/recommendations/kaguya-sama-love-is-war.jpg')"></div>
+          <button class="favorite-btn" aria-label="Agregar Kaguya-sama: Love Is War a favoritos">♡</button>
+          <div class="card-body"><h2>Kaguya-sama: Love Is War</h2><p>Tiene el chika dance que mas info quieres.</p><a href="https://www.animoratv.com/anime/kaguya-sama-wa-kokurasetai-tensaitachi-no-renai-zunousen" class="btn-card external-placeholder" target="_blank" rel="noopener noreferrer">Ver anime →</a></div>
+        </article>
+        <article class="recommendation-card" data-type="anime" data-tags="terror sobrenatural" data-title="Dark Gathering">
+          <div class="card-image" style="--card-img:url('assets/recommendations/dark-gathering.jpg')"></div>
+          <button class="favorite-btn" aria-label="Agregar Dark Gathering a favoritos">♡</button>
+          <div class="card-body"><h2>Dark Gathering</h2><p>Dos locas y un vato que es un iman para fantasmas que podria salir mal.</p><a href="https://www.animoratv.com/anime/dark-gathering" class="btn-card external-placeholder" target="_blank" rel="noopener noreferrer">Ver anime →</a></div>
+        </article>
+      </div>
+    </section>
+    <section id="libros" class="page page-libros" data-page-section="libros">
+      <div class="hero hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content compact">
+          <div class="eyebrow"><img src="assets/icons/libros.png" alt="" /> Libros</div>
+          <h1>Libros</h1>
+          <p class="hero-lead">Historias super interesantes que aunque no te guste leer te van a gustar.</p>
+          <a class="btn btn-primary" href="#books-grid">Explorar libros →</a>
+        </div>
+      </div>
+
+      <div id="books-grid" class="cards-grid container section-spacing">
+        <article class="recommendation-card" data-title="El retrato de Dorian Gray">
+          <div class="card-image" style="--card-img:url('assets/recommendations/el-retrato-de-dorian-gray.jpg')"></div>
+          <button class="favorite-btn" aria-label="Agregar El retrato de Dorian Gray a favoritos">♡</button>
+          <div class="card-body"><h2>El retrato de Dorian Gray</h2><p class="author">Oscar Wilde</p><p>La belleza eterna puede tener un precio muy alto.</p><a href="https://drive.google.com/file/d/11gVprQGjiD6YSNCc8AdqBr8BNpUtaClQ/view?usp=sharing" class="btn-card external-placeholder" target="_blank" rel="noopener noreferrer">Ver en Drive →</a></div>
+        </article>
+        <article class="recommendation-card" data-title="Lágrimas del bosque">
+          <div class="card-image" style="--card-img:url('assets/recommendations/lagrimas-del-bosque.jpg')"></div>
+          <button class="favorite-btn" aria-label="Agregar Lágrimas del bosque a favoritos">♡</button>
+          <div class="card-body"><h2>Lágrimas del bosque</h2><p class="author">Nathalie Bernard</p><p>The promised neverland pero con nativo americanos.</p><a href="https://drive.google.com/file/d/1G2HTvW0wsdpt4VofFmrwUDXzKkdhICR8/view?usp=sharing" class="btn-card external-placeholder" target="_blank" rel="noopener noreferrer">Ver en Drive →</a></div>
+        </article>
+        <article class="recommendation-card" data-title="A 2 metros de ti">
+          <div class="card-image" style="--card-img:url('assets/recommendations/a-2-metros-de-ti.jpg')"></div>
+          <button class="favorite-btn" aria-label="Agregar A 2 metros de ti a favoritos">♡</button>
+          <div class="card-body"><h2>A 2 metros de ti</h2><p class="author">Rachael Lippincott</p><p>Romance con 2 enfermos que si se tocan ahi quedaron.</p><a href="https://drive.google.com/file/d/1N4Rh2blwQDbAewSt276iW_emWLN2CKqh/view?usp=sharing" class="btn-card external-placeholder" target="_blank" rel="noopener noreferrer">Ver en Drive →</a></div>
+        </article>
+        <article class="recommendation-card" data-title="El gato negro">
+          <div class="card-image" style="--card-img:url('assets/recommendations/el-gato-negro.jpg')"></div>
+          <button class="favorite-btn" aria-label="Agregar El gato negro a favoritos">♡</button>
+          <div class="card-body"><h2>El gato negro</h2><p class="author">Edgar Allan Poe</p><p>Es una historia de Edgar Allan Poe ya sabes que va a ser oscura.</p><a href="https://drive.google.com/file/d/1oyYhH5vE76hgtD73ni5lOlAdyUz0XQFa/view?usp=sharing" class="btn-card external-placeholder" target="_blank" rel="noopener noreferrer">Ver en Drive →</a></div>
+        </article>
+      </div>
+    </section>
+    <section id="musica" class="page page-musica" data-page-section="musica">
+      <div class="hero hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content compact">
+          <div class="eyebrow"><img src="assets/icons/musica.png" alt="" /> Música</div>
+          <h1>Música</h1>
+          <p class="hero-lead">Canciones que me gustan y recomiendo escuchar.</p>
+          <a class="btn btn-primary" href="#music-grid">Explorar música →</a>
+        </div>
+      </div>
+
+      <div id="music-grid" class="cards-grid container section-spacing">
+        <article class="recommendation-card music-card" data-title="Oblivious The Strokes">
+          <div class="card-image" style="--card-img:url('assets/recommendations/oblivious.jpg')"></div><button class="favorite-btn">♡</button>
+          <div class="card-body"><h2>Oblivious</h2><p class="author">The Strokes</p><p> No se nada de guitarras pero la de esta cancion me encanta.</p><a href="https://youtu.be/jEjdwhVuW74" class="btn-card external-placeholder" target="_blank" rel="noopener noreferrer">▶ Escuchar en YouTube</a></div>
+        </article>
+        <article class="recommendation-card music-card" data-title="Queen of Hearts TWICE">
+          <div class="card-image" style="--card-img:url('assets/recommendations/queen-of-hearts.jpg')"></div><button class="favorite-btn">♡</button>
+          <div class="card-body"><h2>Queen of Hearts</h2><p class="author">TWICE</p><p>Una de mis favoritas de TWICE.</p><a href="https://youtu.be/Q4Rb5_kjS2M" class="btn-card external-placeholder" target="_blank" rel="noopener noreferrer">▶ Escuchar en YouTube</a></div>
+        </article>
+        <article class="recommendation-card music-card" data-title="Choke The Warning">
+          <div class="card-image" style="--card-img:url('assets/recommendations/choke.jpg')"></div><button class="favorite-btn">♡</button>
+          <div class="card-body"><h2>Choke</h2><p class="author">The Warning</p><p>Los que dicen que el rock esta muerto es porque no conocen a The Warning.</p><a href="https://youtu.be/TlOy0XbFVlM" class="btn-card external-placeholder" target="_blank" rel="noopener noreferrer">▶ Escuchar en YouTube</a></div>
+        </article>
+        <article class="recommendation-card music-card" data-title="Life Is Simple in the Moonlight The Strokes">
+          <div class="card-image" style="--card-img:url('assets/recommendations/life-is-simple-in-the-moonlight.jpg')"></div><button class="favorite-btn">♡</button>
+          <div class="card-body"><h2>Life Is Simple in the Moonlight</h2><p class="author">The Strokes</p><p>Los que critican el album de Angles es porque no tienen buen gusto musical.</p><a href="https://youtu.be/Ke4Zh0QkPFw" class="btn-card external-placeholder" target="_blank" rel="noopener noreferrer">▶ Escuchar en YouTube</a></div>
+        </article>
+      </div>
+    </section>
+    <section id="minijuegos" class="page page-minijuegos" data-page-section="minijuegos">
+      <div class="hero hero-section mini-hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content compact">
+          <div class="eyebrow"><img src="assets/icons/gamepad.png" alt="" /> Minijuegos</div>
+          <h1>Minijuegos</h1>
+          <p class="hero-lead">Pequeños grandes clasicos para relajarse y desestresarse.</p>
+          <a class="btn btn-primary" href="#mini-grid">¡A jugar! →</a>
+        </div>
+        <img class="hero-mascot" src="assets/mascot/mono-saludando.png" alt="Changuito" />
+      </div>
+
+      <div id="mini-grid" class="mini-grid container section-spacing">
+        <article class="mini-card"><div class="mini-screen snake-preview"><span></span><i></i></div><h2>Snake</h2><p>El clasico de nokia nunca falla.</p><button class="btn-card game-launch" data-game="Snake">🎮 Jugar →</button></article>
+        <article class="mini-card"><div class="mini-screen pong-preview"><span></span><i></i><b></b></div><h2>Pong</h2><p>Pong es un clasico que debia estar si o si</p><button class="btn-card game-launch" data-game="Pong">🎮 Jugar →</button></article>
+        <article class="mini-card"><div class="mini-screen frogger-preview">🐸</div><h2>Cross the road</h2><p>Un clasico imperdible.</p><button class="btn-card game-launch" data-game="Frogger">🎮 Jugar →</button></article>
+        <article class="mini-card"><div class="mini-screen jumper-preview">● ↑ ●</div><h2>Jumper</h2><p>Un doodle jump pirata.</p><button class="btn-card game-launch" data-game="Platform Jumper">🎮 Jugar →</button></article>
+      </div>
+
+      <div class="mini-bottom container">
+        <div class="scores glass-panel">
+          <h3>🏆 Mejores puntuaciones</h3>
+          <table><thead><tr><th>#</th><th>Jugador</th><th>Puntuación</th></tr></thead><tbody><tr><td>1</td><td>PixelNeko</td><td>324</td></tr><tr><td>2</td><td>LunaPixel</td><td>287</td></tr><tr><td>3</td><td>RetroGamer</td><td>256</td></tr></tbody></table>
+        </div>
+        <div class="controls glass-panel"><h3>🎮 Controles y ayuda</h3><p><kbd>← ↑ ↓ →</kbd> mover / navegar</p><p><kbd>Z</kbd> seleccionar / saltar</p><p><kbd>X</kbd> acción especial</p><p><kbd>P</kbd> pausa</p></div>
+      </div>
+    </section>
+    <section id="favoritos" class="page simple-page" data-page-section="favoritos">
+      <div class="simple-wrap container">
+        <h1>♥ Favoritos</h1>
+        <p>Todo lo que marques con un corazón aparecerá aquí.</p>
+        <div id="favorites-list" class="favorites-list"></div>
+      </div>
+  </section>
+    <section id="sobre-mi" class="page simple-page" data-page-section="sobre-mi">
+      <div class="simple-wrap container about-me">
+        <img src="assets/mascot/mono-saludando.png" alt="Mascota del sitio" />
+        <div>
+          <h1>Sobre mí</h1>
+          <p>Que tal todos, soy Ray. En este espacio reuni algunas de las cosas que más disfruto como el anime los videojuegos entre otros para compartirlos con el que vea la pagina.</p>
+          <p class="note"><strong> No se ni como pero logre hacer la pagina xd.</strong></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <img src="assets/mascot/mono-relajado.png" alt="" />
+    <span>El rincón de Ray — Un lugar hecho con puras ganas</span>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
